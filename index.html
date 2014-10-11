@@ -5,13 +5,34 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="Personal website" />
 		<meta name="keywords" content="Harrison Mulder computer science software engineering" />
-		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/jquery.scrollzer.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
 		<script src='js/site.js'></script>
+		<link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+		<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".fancybox").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 600,
+					fitToView	: false,
+					width		: '50%',
+					height		: '50%',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
+			});
+		</script>
+		
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -119,19 +140,21 @@
 							<p style="font-weight:bold;color:white;">Here is a list of some of my personal projects, as well as some products that I've worked on.</p>
 						
 							<div class="row" style="text-align:center;">
-								<div class="6u">
-									<article class="item" style="border-radius: 30px 30px 30px 30px;padding:25px;background-color:white;">
-										<a title="U of M CEM Group Website" href="http://construction.ce.umanitoba.ca/" target="_blank" class="image fit"><img src="images/uofmicon.png" alt="" /></a>
-									</article>
-									<article class="item" style="border-radius: 30px 30px 30px 30px;padding:25px;background-color:white;">
-										<a title="League of Legends BestItemsNA! Web App" href="http://bestitemsna.info/" target="_blank" class="image fit"><img src="images/leagueicon.png" alt="" /></a>
+								<div class="4u">
+									<article class="item">
+										<a class="fancybox image fit" data-fancybox-type="iframe" title="League of Legends BestItemsNA! Web App" href="http://www.google.ca/"><img src="images/leagueicon.png" alt="" /></a>
 									</article>
 								</div>
-								<div class="6u">
-									<article class="item" style="border-radius: 30px 30px 30px 30px;padding:25px;background-color:white;">
+								<div class ="4u">
+									<article class="item" style="margin-bottom:135px;">
+										<a title="U of M CEM Group Website" href="http://construction.ce.umanitoba.ca/" target="_blank" class="image fit"><img src="images/uofmicon.png" alt="" /></a>
+									</article>
+									<article class="item">
 										<a title="Todd Labelle Promotions Website" href="http://www.toddlabellepromotions.com/" target="_blank" class="image fit"><img src="images/toddicon.png" alt="" /></a>
 									</article>
-									<article class="item" style="border-radius: 30px 30px 30px 30px;padding:25px;background-color:white;">
+								</div>
+								<div class="4u">
+									<article class="item">
 										<a title="YES International Website" href="http://www.yesinternational.ca/" target="_blank" class="image fit"><img src="images/yesicon.png" alt="" /></a>
 									</article>
 								</div>
