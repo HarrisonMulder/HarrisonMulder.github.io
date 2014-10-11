@@ -765,8 +765,7 @@
 		
 			#main > section.one
 			{
-				background-color: #81918E;
-				background-image: url('../images/banner.jpg');
+				background: url('../images/banner.jpg') repeat fixed 0px 0px #81918E !important;;
 			}
 
 			#main > section.two
