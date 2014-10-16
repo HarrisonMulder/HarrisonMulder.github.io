@@ -777,7 +777,7 @@
 		
 			#main > section.one
 			{
-				background: url('../images/banner.jpg') repeat fixed 0px 0px #000000 !important;;
+				background-color: #000000;
 			}
 
 			#main > section.two
