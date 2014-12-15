@@ -17,13 +17,13 @@
 		box-shadow: 0px 0px 20px #fff;
 		border-radius: 30px 30px 30px 30px;
 		padding:25px;
-		background-color:white;
+		background-color:silver;
 	}
 	
 		article:hover
 		{
 			box-shadow: 0px 0px 20px #bbb;
-			background-color:silver;"
+			background-color:grey;
 		}
 	
 	body
