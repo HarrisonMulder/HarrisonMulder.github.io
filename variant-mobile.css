@@ -2,7 +2,7 @@ body
 {
     padding:0; 
     margin:0; 
-    font:90% Helvetica,Verdana,Arial,sans-serif; 
+    font:Helvetica,Verdana,Arial,sans-serif; 
     background:#111 url(background.gif) top left repeat-x; 
     color:#eee; 
     text-align:center; 
@@ -55,38 +55,6 @@ header h2
     font-size:1.4em; 
     font-weight:400;
 }
-nav 
-{
-    text-align:left; 
-    margin:10px 0 20px 0;
-}
-nav ul 
-{
-    text-align:center; 
-    font-size:1.0em; 
-    line-height:1.1em; 
-    color:#aaa; 
-    margin:0;
-}
-nav li 
-{
-    list-style:none; 
-    margin:0; 
-    margin:0 20px 10px 0;
-}
-nav a 
-{
-    padding:8px; 
-    font-weight:400; 
-    font-size:1.4em; 
-    margin:0 10px 0 0; 
-    color:#eee;
-}
-nav a.active 
-{
-    color:#dbd579; 
-    text-decoration:underline;
-}
 article 
 {
     clear:both; 
@@ -107,7 +75,7 @@ article h2
 }
 article p 
 {
-    font-size:1em; 
+    font-size:1.2em; 
     margin:10px 10px 20px 10px;
 }
 footer 

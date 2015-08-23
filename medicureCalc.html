@@ -157,22 +157,11 @@
 				<h1><a href="index.html">Aggrastat Tirofiban HCI</a></h1>
 				<h2>Dosing and Administration Calculator<br /><i>High-Dose Bolus Regimen</i></h2>
 			</header>
-	
-			<!--nav>
-				<ul style="padding-top:30px;">
-					<li><a href="http://www.medicure.com/" target="_blank">Back to Medicure.com</a></li>
-					<li><a href="http://www.medicure.com/aggrastat/aggrastat.php" target="_blank">Back to Aggrastat info</a></li>
-					<li><a href="http://medicure.actonsoftware.com/acton/attachment/3928/f-016f/0/-/-/-/-/file.pdf" target="_blank">Nursing Handout (pdf)</a></li>
-					<li><a href="http://medicure.actonsoftware.com/acton/attachment/3928/f-0170/0/-/-/-/-/file.pdf" target="_blank">Dosage Chart  (pdf)</a></li> 
-					<li><a href="http://medicure.actonsoftware.com/acton/attachment/3928/f-0171/0/-/-/-/-/file.pdf" target="_blank">Inservice Slides (pdf)</a></li>
-				</ul>
-			</nav-->
-	
 			<article>
-				<h2 style="text-align:center;">Enter your information below (see <a href="http://www.medicure.com/aggrastat/guidelines.php">guidelines</a>)</h2>
+				<h2 style="text-align:left;">Enter your information below (see <a href="http://www.medicure.com/aggrastat/guidelines.php">guidelines</a>)</h2>
 
-				<form style="text-align:center;">
-					Patient Weight:
+				<form style="text-align:left;">
+					<p>Patient Weight:<br />
 					<select name="weightInput" id="weightInput">
 						<option value="0">66-82 lbs (30-37 kg)</option>
 						<option value="1">83-100 lbs (38-45 kg)</option>
@@ -189,24 +178,21 @@
 						<option value="12">284-302 lbs (129-137 kg)</option>
 						<option value="13">303-319 lbs (138-145 kg)</option>
 						<option value="14">320-337 lbs (146-153 kg)</option>
-					</select>
-					<br />Creatinine Clearance:
+					</select><br />
+					Creatinine Clearance:<br />
 					<select name="clearanceInput" id="clearanceInput">
 						<option value="0">> 60 mL/min</option>
 						<option value="1">< 60 mL/min</option>
-					</select>
-					<br /><br />
-					<input type="button" onclick="calculateResults()" value="Submit" />
-					<br /><br />
+					</select><br /><br />
+					<input type="button" onclick="calculateResults()" value="Submit" /><br /><br />
 					<span>
 						<!-- Bolus Rate (mL/hr):
 						<textarea id="bolusRate" style="height:20px;"></textarea> -->
-						Volume (mL):
-						<textarea id="volume" style="height:20px;text-align:center;"></textarea>
-						Infusion Rate (mL/hr):
-						<textarea id="infusionRate" style="height:20px;text-align:center;"></textarea>
-						<br /><br />
-					</span>
+						Volume (mL):<br />
+						<textarea id="volume" style="height:20px;text-align:center;"></textarea><br />
+						Infusion Rate (mL/hr):<br />
+						<textarea id="infusionRate" style="height:20px;text-align:center;"></textarea><br /><br />
+					</span></p>
 				</form>
 
 				<h2>High-Dose Bolus Regimen</h2>
