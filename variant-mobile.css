@@ -10,7 +10,7 @@ body
 }
 #wrap 
 {
-    width:95%; 
+    width:100%; 
     max-width:960px; 
     text-align:left; 
     margin:0 auto;
@@ -22,7 +22,7 @@ header, nav, article, footer
 header 
 {
     text-align:center; 
-    width:95%; 
+    width:100%; 
     max-width:960px; 
     background-color:#0f334d; 
     border:1px solid #aaa; 
@@ -59,7 +59,7 @@ article
 {
     clear:both; 
     background-color:#111; 
-    width:95%; 
+    width:100%; 
     max-width:960px; 
     overflow:hidden; 
     border:1px solid #333; 
@@ -75,7 +75,7 @@ article h2
 }
 article p 
 {
-    font-size:1.2em; 
+    font-size:1.3em; 
     margin:10px 10px 20px 10px;
 }
 footer 
@@ -84,7 +84,7 @@ footer
     text-align:right; 
     margin:0 0 20px 0; 
     font-size:0.8em; 
-    width:95%; 
+    width:100%; 
     max-width:960px; 
     line-height:1.4em; 
     color:#aaa; 
