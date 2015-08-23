@@ -21,9 +21,9 @@ header, nav, article, footer
 }
 header 
 {
-    float:left; 
     text-align:center; 
-    width:60%; 
+    width:95%; 
+    max-width:960px; 
     background-color:#0f334d; 
     border:1px solid #aaa; 
     margin:20px 0;
@@ -91,7 +91,7 @@ article
 {
     clear:both; 
     background-color:#111; 
-    width:100%; 
+    width:95%; 
     max-width:960px; 
     overflow:hidden; 
     border:1px solid #333; 
@@ -116,7 +116,7 @@ footer
     text-align:right; 
     margin:0 0 20px 0; 
     font-size:0.8em; 
-    width:100%; 
+    width:95%; 
     max-width:960px; 
     line-height:1.4em; 
     color:#aaa; 
