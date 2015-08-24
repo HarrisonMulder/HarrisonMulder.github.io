@@ -78,9 +78,11 @@
 			</header>
 			<article>
 				<form>
+					<h2>Enter information below (<a href="http://www.medicure.com/aggrastat/guidelines.php" target="_blank">guidelines</a>)</h2>
+
 					<fieldset class="ui-field-contain">
-						<legend>Enter information below (<a href="http://www.medicure.com/aggrastat/guidelines.php" target="_blank">guidelines</a>)</legend>
-						<label for="weightInput">Patient Weight:</label>
+						<legend></legend>
+						<label class="left" for="weightInput">Patient Weight:</label>
 						<select name="weightInput" id="weightInput">
 							<option value="0">66-82 lbs (30-37 kg)</option>
 							<option value="1">83-100 lbs (38-45 kg)</option>
@@ -99,7 +101,7 @@
 							<option value="14">320-337 lbs (146-153 kg)</option>
 						</select>
 
-						<label for="clearanceInput">Creatinine Clearance:</label>
+						<label class="left" for="clearanceInput">Creatinine Clearance:</label>
 						<select name="clearanceInput" id="clearanceInput">
 								<option value="0">> 60 mL/min</option>
 								<option value="1">< 60 mL/min</option>
@@ -109,19 +111,20 @@
 				
 				<button onclick="calculateResults()">Submit</button>
 
+				<form>
 					<h2>Results:</h2>
 
-					<h2>Volume (mL):</h2>
-					<p>
-						<textarea id="volume"></textarea>
-					</p>
+					<fieldset>
+						<legend></legend>
+						<label class="centre" for="volume">Volume (mL):</label>
+						<textarea name="volume" id="volume"></textarea>
 
-					<h2>Infusion Rate (mL/hr):</h2>
-					<p>
-						<textarea id="infusionRate"></textarea>
-					</p>
+						<label class="centre" for="infusionRate">Infusion Rate (mL/hr):</label>
+						<textarea name="infusionRate" id="infusionRate"></textarea>
+					</fieldset>
+				</form>
 
-				<p>
+				<p class="right">
 					Contact: 1-800-509-0544
 					<br /><a href="mailto:aggrastat@medicure.com">aggrastat@medicure.com</a>
 					<br />Copyright &copy; 2015 <a href="http://www.medicure.com/">Medicure</a>

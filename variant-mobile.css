@@ -45,7 +45,20 @@ article p {
     font-size:1em; 
     margin:10px 10px 20px 10px;
 }
-legend {
-    font-size:1.4em; 
-    font-weight:400;
+textarea {
+    text-align:center;
+    vertical-align:central;
+}
+.left {
+    text-align:left;
+}
+.centre {
+    text-align:center;
+}
+.right {
+    text-align:right;
+}
+form {
+    padding-left:10px;
+    padding-right:10px;
 }
