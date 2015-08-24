@@ -45,3 +45,7 @@ article p {
     font-size:1em; 
     margin:10px 10px 20px 10px;
 }
+legend {
+    font-size:1.4em; 
+    font-weight:400;
+}
