@@ -5,204 +5,119 @@
 		<meta name="description" content="Medicure Aggrastat Tirofiban HCI Dosing and Administration" />
 		<meta name="keywords" content="medicure,creatine,dosage,aggrastat,tirofiban,bolus" />
 		<meta name="author" content="Harrison Mulder" />
+
 		<link rel="stylesheet" type="text/css" href="variant-mobile.css" title="Variant Mobile" media="all" />
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
 		<title>Medicure - Aggrastat Dosing and Administration Calculator</title>
 	</head>
-		<script>
-			function calculateResults() {
-				var weight = document.getElementById("weightInput").selectedIndex;
-				var clearance = document.getElementById("clearanceInput").selectedIndex;
-				//var bolusRate;
-				var volume;
-				var infusionRate;
 
-				if (clearance == 0) {
-					switch (weight) {
-						case 0:
-							volume = '17';
-							infusionRate = '6';
-							break;
-						case 1:
-							volume = '21';
-							infusionRate = '7.5';
-							break;
-						case 2:
-							volume = '25';
-							infusionRate = '9';
-							break;
-						case 3:
-							volume = '29';
-							infusionRate = '10.5';
-							break;
-						case 4:
-							volume = '33';
-							infusionRate = '12';
-							break;
-						case 5:
-							volume = '37.5';
-							infusionRate = '13.5';
-							break;
-						case 6:
-							volume = '42';
-							infusionRate = '15';
-							break;
-						case 7:
-							volume = '46';
-							infusionRate = '16.5';
-							break;
-						case 8:
-							volume = '50';
-							infusionRate = '18';
-							break;
-						case 9:
-							volume = '54';
-							infusionRate = '19.5';
-							break;
-						case 10:
-							volume = '58';
-							infusionRate = '21';
-							break;
-						case 11:
-							volume = '62';
-							infusionRate = '22.5';
-							break;
-						case 12:
-							volume = '66.5';
-							infusionRate = '24';
-							break;
-						case 13:
-							volume = '71';
-							infusionRate = '25.5';
-							break;
-						case 14:
-							volume = '75';
-							infusionRate = '27';
-							break;
-					}
-				}
-				else if (clearance == 1) {
-					switch (weight) {
-						case 0:
-							volume = '17';
-							infusionRate = '3';
-							break;
-						case 1:
-							volume = '21';
-							infusionRate = '3.75';
-							break;
-						case 2:
-							volume = '25';
-							infusionRate = '4.5';
-							break;
-						case 3:
-							volume = '29';
-							infusionRate = '5.25';
-							break;
-						case 4:
-							volume = '33';
-							infusionRate = '6';
-							break;
-						case 5:
-							volume = '37.5';
-							infusionRate = '6.75';
-							break;
-						case 6:
-							volume = '42';
-							infusionRate = '7.5';
-							break;
-						case 7:
-							volume = '46';
-							infusionRate = '8.25';
-							break;
-						case 8:
-							volume = '50';
-							infusionRate = '9';
-							break;
-						case 9:
-							volume = '54';
-							infusionRate = '9.75';
-							break;
-						case 10:
-							volume = '58';
-							infusionRate = '10.5';
-							break;
-						case 11:
-							volume = '62';
-							infusionRate = '11.25';
-							break;
-						case 12:
-							volume = '66.5';
-							infusionRate = '12';
-							break;
-						case 13:
-							volume = '71';
-							infusionRate = '12.75';
-							break;
-						case 14:
-							volume = '75';
-							infusionRate = '13.5';
-							break;
-					}
-				}
+	<script>
+		function calculateResults() {
+			var weight = document.getElementById("weightInput").selectedIndex;
+			var clearance = document.getElementById("clearanceInput").selectedIndex;
 
-				//document.getElementById("bolusRate").innerText = 999;
-				document.getElementById("volume").innerText = volume;
-				document.getElementById("infusionRate").innerText = infusionRate;
+			var volume;
+			var infusionRate;
+
+			if (clearance == 0) {
+				switch (weight) {
+					case 0: volume = '17'; infusionRate = '6'; break;
+					case 1: volume = '21'; infusionRate = '7.5'; break;
+					case 2: volume = '25'; infusionRate = '9'; break;
+					case 3: volume = '29'; infusionRate = '10.5'; break;
+					case 4: volume = '33'; infusionRate = '12'; break;
+					case 5: volume = '37.5'; infusionRate = '13.5'; break;
+					case 6: volume = '42'; infusionRate = '15'; break;
+					case 7: volume = '46'; infusionRate = '16.5'; break;
+					case 8: volume = '50'; infusionRate = '18'; break;
+					case 9: volume = '54'; infusionRate = '19.5'; break;
+					case 10: volume = '58'; infusionRate = '21'; break;
+					case 11: volume = '62'; infusionRate = '22.5'; break;
+					case 12: volume = '66.5'; infusionRate = '24'; break;
+					case 13: volume = '71'; infusionRate = '25.5'; break;
+					case 14: volume = '75'; infusionRate = '27'; break;
+				}
 			}
-		</script>
-	<body>
+			else if (clearance == 1) {
+				switch (weight) {
+					case 0: volume = '17'; infusionRate = '3'; break;
+					case 1: volume = '21'; infusionRate = '3.75'; break;
+					case 2: volume = '25'; infusionRate = '4.5'; break;
+					case 3: volume = '29'; infusionRate = '5.25'; break;
+					case 4: volume = '33'; infusionRate = '6'; break;
+					case 5: volume = '37.5'; infusionRate = '6.75'; break;
+					case 6: volume = '42'; infusionRate = '7.5'; break;
+					case 7: volume = '46'; infusionRate = '8.25'; break;
+					case 8: volume = '50'; infusionRate = '9'; break;
+					case 9: volume = '54'; infusionRate = '9.75'; break;
+					case 10: volume = '58'; infusionRate = '10.5'; break;
+					case 11: volume = '62'; infusionRate = '11.25'; break;
+					case 12: volume = '66.5'; infusionRate = '12'; break;
+					case 13: volume = '71'; infusionRate = '12.75'; break;
+					case 14: volume = '75'; infusionRate = '13.5'; break;
+				}
+			}
 
-		<div id="wrap">
+			document.getElementById("volume").innerText = volume;
+			document.getElementById("infusionRate").innerText = infusionRate;
+		}
+	</script>
+	
+	<body>
+		<div id="container">
 			<header>
-				<h1><a href="index.html">Aggrastat Tirofiban HCI</a></h1>
-				<h2>Dosing and Administration Calculator<br /><i>High-Dose Bolus Regimen</i></h2>
+				<h1>Aggrastat Tirofiban HCI</h1>
+				<h2>
+					Dosing and Administration Calculator<br />
+					<i>High-Dose Bolus Regimen</i>
+				</h2>
 			</header>
 			<article>
-				<h2 style="text-align:left;">Enter information below (<a href="http://www.medicure.com/aggrastat/guidelines.php">guidelines</a>)</h2>
-				<form style="text-align:left;">
-					<h2 style="text-align:left;">Patient Weight:</h2>
+				<h2>Enter information below (<a href="http://www.medicure.com/aggrastat/guidelines.php">guidelines</a>)</h2>
+				
+				<form>
+					<label for="weightInput">Patient Weight:</label>
+					<select name="weightInput" id="weightInput">
+						<option value="0">66-82 lbs (30-37 kg)</option>
+						<option value="1">83-100 lbs (38-45 kg)</option>
+						<option value="2">101-119 lbs (46-54 kg)</option>
+						<option value="3">120-137 lbs (55-62 kg)</option>
+						<option value="4">138-155 lbs (63-70 kg)</option>
+						<option value="5">156-174 lbs (70-79 kg)</option>
+						<option value="6">175-192 lbs (80-87 kg)</option>
+						<option value="7">193-210 lbs (88-95 kg)</option>
+						<option value="8">211-229 lbs (96-104 kg)</option>
+						<option value="9">230-247 lbs (105-112 kg)</option>
+						<option value="10">248-265 lbs (113-120 kg)</option>
+						<option value="11">266-283 lbs (121-128 kg)</option>
+						<option value="12">284-302 lbs (129-137 kg)</option>
+						<option value="13">303-319 lbs (138-145 kg)</option>
+						<option value="14">320-337 lbs (146-153 kg)</option>
+					</select>
+
+					<label for="clearanceInput">Creatinine Clearance:</label>
+					<select name="clearanceInput" id="clearanceInput">
+							<option value="0">> 60 mL/min</option>
+							<option value="1">< 60 mL/min</option>
+					</select>
+					
+					<input type="button" onclick="calculateResults()" value="Submit" />
+					
+					<h2>Results:</h2>
+
+					<h2>Volume (mL):</h2>
 					<p>
-						<select style="width:300px;height:45px;" name="weightInput" id="weightInput">
-							<option value="0">66-82 lbs (30-37 kg)</option>
-							<option value="1">83-100 lbs (38-45 kg)</option>
-							<option value="2">101-119 lbs (46-54 kg)</option>
-							<option value="3">120-137 lbs (55-62 kg)</option>
-							<option value="4">138-155 lbs (63-70 kg)</option>
-							<option value="5">156-174 lbs (70-79 kg)</option>
-							<option value="6">175-192 lbs (80-87 kg)</option>
-							<option value="7">193-210 lbs (88-95 kg)</option>
-							<option value="8">211-229 lbs (96-104 kg)</option>
-							<option value="9">230-247 lbs (105-112 kg)</option>
-							<option value="10">248-265 lbs (113-120 kg)</option>
-							<option value="11">266-283 lbs (121-128 kg)</option>
-							<option value="12">284-302 lbs (129-137 kg)</option>
-							<option value="13">303-319 lbs (138-145 kg)</option>
-							<option value="14">320-337 lbs (146-153 kg)</option>
-						</select>
+						<textarea id="volume"></textarea>
 					</p>
-					<h2 style="text-align:left;">Creatinine Clearance:</h2>
-                    <p>
-                        <select style="width:300px;height:45px;" name="clearanceInput" id="clearanceInput">
-                            <option value="0">> 60 mL/min</option>
-                            <option value="1">< 60 mL/min</option>
-                        </select>
-                    </p>
-                    <p>
-                        <input style="width:150px;height:30px;" type="button" onclick="calculateResults()" value="Submit" />
-                    </p>
-                    <h2 style="text-align:left;">Results:</h2>
-                    <span>
-						<!-- Bolus Rate (mL/hr):
-						<textarea id="bolusRate" style="height:20px;"></textarea> -->
-						<h2 style="text-align:left;">Volume (mL):</h2>
-						<p>
-                            <textarea id="volume" style="width:300px;height:45px;text-align:center;"></textarea>
-						</p>
-						<h2 style="text-align:left;">Infusion Rate (mL/hr):</h2>
-                        <p>
-                            <textarea id="infusionRate" style="width:300px;height:45px;text-align:center;"></textarea>
-                        </p>
-					</span>
+
+					<h2>Infusion Rate (mL/hr):</h2>
+					<p>
+						<textarea id="infusionRate"></textarea>
+					</p>
 				</form>
 
 				<h2>High-Dose Bolus Regimen</h2>
@@ -228,16 +143,14 @@
 					<li>Females (140-age) (body weight in kg) (0.85) / 72 (serum creatinine)</li>
 				</ul>
 				<p>Download dosing chart for complete dosing table including for patients with renal insufficiency.</p>
-			</article>
-	
-			<footer>
+
 				<p>
 					Contact: 1-800-509-0544
 					<br /><a href="mailto:aggrastat@medicure.com">aggrastat@medicure.com</a>
 					<br />Copyright &copy; 2015 <a href="http://www.medicure.com/">Medicure</a>
 					<br />Powered by <a href="http://harrisonmulder.github.io/">Harrison Mulder</a>
 				</p>
-			</footer>
+			</article>
 		</div>
 	</body>
 </html>
